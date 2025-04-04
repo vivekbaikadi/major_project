@@ -1,0 +1,57 @@
+.payment-history {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-history h2 {
+    text-align: center;
+    color: #333;
+}
+
+.payment-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.payment-history th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.payment-history th {
+    background: #f4f4f4;
+}
+
+.payment-history .paid {
+    color: green;
+    font-weight: bold;
+}
+
+.payment-history .failed {
+    color: red;
+    font-weight: bold;
+}
+
+.button{
+    padding: 5px 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+.payment-history .error {
+    color: red;
+    text-align: center;
+}

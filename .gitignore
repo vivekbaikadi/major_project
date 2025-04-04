@@ -1,0 +1,10 @@
+admin/node_modules/
+client/node_modules/
+server/node_modules/
+admin/.env
+client/.env
+server/.env
+*.log
+.DS_Store
+Thumbs.db
+.vscode/

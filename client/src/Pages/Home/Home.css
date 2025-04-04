@@ -1,0 +1,550 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: #000;
+}
+
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 100;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+header .menu {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-weight: 600;
+}
+
+header .menu li {
+    cursor: pointer;
+}
+
+.nav-description {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #333;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-bar {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.wishlist-btn, .payment-history-btn, .sign-in-btn {
+    background: #000;
+    color: white;
+}
+
+button:hover {
+    background: #444;
+}
+
+
+.slider {
+    height: 100vh;
+    position: relative;
+}
+
+.slider .list {
+    position: relative;
+    height: 100%;
+}
+
+.slider .list .item {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+
+.slider .list .item .content {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    width: 400px;
+    text-align: right;
+    color: #000;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.slider .list .item .content h2 {
+    font-size: 40px;
+    margin: 0;
+}
+
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.arrows button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.arrows button:hover {
+    background: black;
+}
+
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: black;
+}
+
+@media screen and (max-width: 768px) {
+    .slider .list .item .content {
+        right: 5%;
+        width: 80%;
+        text-align: center;
+    }
+    .arrows {
+        top: 45%;
+    }
+} */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    color: #000;
+}
+
+/* Header */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 100;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+header .menu {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-weight: 600;
+}
+
+/* header .menu li {
+    cursor: pointer;
+    padding-bottom: 5px;
+    position: relative;
+} */
+
+
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-actions .headerSearch {
+    flex: 1;
+    height: 40px;
+    background: #f3f4f7;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+    border: none;
+    position: relative;
+    margin-right: 150px;
+}
+
+.header-actions .headerSearch input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+.header-actions .headerSearch button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+button {
+    padding: 8px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    background: none;
+}
+
+.wishlist-btn,
+.payment-history-btn,
+.sign-in-btn {
+
+    color: black;
+}
+
+button:hover {
+    background: #b5b3b3;
+}
+
+/* Slider */
+.slider {
+    height: 100vh;
+    position: relative;
+}
+
+.slider .list {
+    position: relative;
+    height: 100%;
+}
+
+.slider .list .item {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Static Text Overlay */
+.slider-text {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    width: 400px;
+    text-align: right;
+    color: white;
+    font-weight: bold;
+}
+
+.slider-text h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.slider-text p {
+    font-size: 16px;
+}
+
+/* Start Scan Button */
+.start-scan-btn {
+    background: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.start-scan-btn:hover {
+    background: #e65c00;
+}
+
+/* Remove Arrow Buttons */
+.arrows {
+    display: none;
+    /* Hide arrow buttons */
+}
+
+/* Dot Navigation */
+/* Fix Dot Navigation */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    position: absolute;
+    bottom: 30px;
+    /* Ensure it stays visible */
+    width: 100%;
+    z-index: 20;
+    /* Keep dots on top */
+}
+
+/* Default dot style */
+.dot {
+    width: 14px;
+    height: 14px;
+    background-color: rgba(90, 84, 84, 0.6);
+    /* Semi-transparent white */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Active dot */
+.dot.active {
+    background-color: rgb(49, 46, 46);
+    /* Full white for visibility */
+    width: 16px;
+    height: 16px;
+    transform: scale(1.2);
+    /* Slightly larger for emphasis */
+}
+
+
+
+
+
+/* Slider Text - Always Visible & On Right Side */
+.slider-text {
+    position: absolute;
+    right: 10%;
+    /* Moves text to the right */
+    top: 30%;
+    width: 450px;
+    /* Slightly wider */
+    text-align: right;
+    color: rgba(4, 4, 4, 0);
+    font-weight: bold;
+    z-index: 20;
+    /* Ensure it stays above images */
+    opacity: 1;
+    /* Ensure it never disappears */
+    transition: none;
+    /* Prevent unwanted fade-outs */
+}
+
+/* Heading Styling */
+.slider-text h2 {
+    font-size: 70px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: black;
+}
+
+/* Paragraph Styling */
+.slider-text p {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+/* Start Scan Button */
+.start-scan-btn {
+    background: #ff6600;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-right: 70px;
+}
+
+.start-scan-btn:hover {
+    background: #e65c00;
+}
+
+/* Ensure text is always visible even during slide transitions */
+.slider .list .item.active .slider-text {
+    opacity: 1 !important;
+    /* Force text to remain visible */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .slider-text {
+        right: 5%;
+        width: 90%;
+        text-align: center;
+    }
+}
+
+/* Smooth scrolling */
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Active state styling */
+.menu li.active a {
+    position: relative;
+}
+
+.menu li.active a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.menu li.active a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/* Product transitions */
+.product-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Swiper navigation styling */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-color) !important;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-button-disabled {
+    opacity: 0.5 !important;
+}
+
+/* Search results transition */
+.search-results {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform-origin: top;
+}
+
+/* Required for ScrollReveal to work */
+.sr-element {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.5, 0, 0, 1);
+}
+
+/* When ScrollReveal triggers */
+.sr-element.revealed {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Force hardware acceleration */
+.swiper-slide {
+    transform: translateZ(0);
+}
+
+
+/* Responsive code*/
+
