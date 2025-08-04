@@ -59,7 +59,7 @@
 
 > Admin view to see all registered users with basic info and actions.
 
-![User List](screenshots/user_list_page.png)
+![User List](screenshots/users_list_page.png)
 
 ---
 
@@ -67,7 +67,7 @@
 
 > Admins can upload or update products with name, price, barcode, and stock info.
 
-![Product Upload](screenshots/admin_product-upload.png)
+![Product Upload](screenshots/admin_product_upload.png)
 
 ---
 
@@ -91,7 +91,7 @@
 
 > Lists all past orders with date, total amount, and download links for PDF bills.
 
-![Payment History](screenshots/payment_history.png)
+![Payment History](screenshots/paymet_history.png)
 
 ---
 
